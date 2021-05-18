@@ -1,13 +1,12 @@
 [
 null,
-{"id":1,"expanded":false,"name":"Debug Room","order":6,"parentId":0,"scrollX":1182.5454545454545,"scrollY":665.4545454545455},
-{"id":2,"expanded":true,"name":"home","order":1,"parentId":0,"scrollX":1182.5454545454545,"scrollY":665.4545454545455},
-{"id":3,"expanded":false,"name":"boulderPass","order":3,"parentId":0,"scrollX":990.8571428571428,"scrollY":509.1428571428571},
+{"id":1,"expanded":false,"name":"Debug Room","order":6,"parentId":0,"scrollX":1228.5,"scrollY":691.5},
+{"id":2,"expanded":true,"name":"home","order":1,"parentId":0,"scrollX":1228.5,"scrollY":691.5},
+{"id":3,"expanded":false,"name":"boulderPass","order":3,"parentId":0,"scrollX":1228.5,"scrollY":691.5},
 {"id":4,"expanded":true,"name":"bpdugeon1","order":4,"parentId":3,"scrollX":1282.2857142857142,"scrollY":1158.857142857143},
 {"id":5,"expanded":false,"name":"bpdugeon2","order":5,"parentId":3,"scrollX":1282.2857142857142,"scrollY":864},
-{"id":6,"expanded":false,"name":"homeInside","order":2,"parentId":2,"scrollX":929.1428571428571,"scrollY":522.8571428571428},
-{"id":7,"expanded":false,"name":"Grassmeetsdesert","order":7,"parentId":0,"scrollX":929.1428571428571,"scrollY":522.8571428571428},
-{"id":8,"expanded":true,"name":"snowforest","order":9,"parentId":0,"scrollX":1182.5454545454545,"scrollY":665.4545454545455},
-{"id":9,"expanded":false,"name":"Desert","order":8,"parentId":7,"scrollX":915.4285714285713,"scrollY":834.8571428571428},
-{"id":10,"expanded":false,"name":"SnowyCampsite","order":10,"parentId":8,"scrollX":1182.5454545454545,"scrollY":665.4545454545455}
+{"id":6,"expanded":false,"name":"homeInside","order":2,"parentId":2,"scrollX":1092,"scrollY":614.6666666666666},
+{"id":7,"expanded":true,"name":"Grassmeetsdesert","order":7,"parentId":0,"scrollX":1228.5,"scrollY":691.5},
+{"id":8,"expanded":true,"name":"snowforest","order":8,"parentId":0,"scrollX":1228.5,"scrollY":691.5},
+{"id":9,"expanded":false,"name":"snowcampsite","order":9,"parentId":8,"scrollX":1228.5,"scrollY":691.5}
 ]
