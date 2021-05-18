@@ -1,0 +1,4 @@
+[
+null,
+{"id":1,"battlerName":"battle g2s","characterIndex":0,"characterName":"walk g2s","classId":1,"equips":[0,0,2,3,0],"faceIndex":0,"faceName":"Face g2s","traits":[{"code":52,"dataId":4,"value":1},{"code":55,"dataId":1,"value":1},{"code":41,"dataId":1,"value":1},{"code":43,"dataId":11,"value":1},{"code":43,"dataId":12,"value":1},{"code":43,"dataId":13,"value":1},{"code":43,"dataId":14,"value":1},{"code":43,"dataId":15,"value":1},{"code":43,"dataId":16,"value":1},{"code":43,"dataId":17,"value":1}],"initialLevel":5,"maxLevel":99,"name":"Vermillion","nickname":"","note":"","profile":""}
+]
