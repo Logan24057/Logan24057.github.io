@@ -1,58 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thumbs Panel</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <div id="content">
-    <div id="headerBox">
-      <h1>Thumbs Panel</h1>
-      <p id="phrasePara"></p>
-    </div>
-    <div class="linksBox">
-      <p>This is a panel to control the Formbar.</p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=up">Thumbs Up</a></p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=wiggle">Thumbs wiggle</a></p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=down">Thumbs Down</a></p>
-    </div>
-    <div class="textBox">
-      <img class="f-left" src="img/Hollow.png" alt="Hollow Mask">
-      <p>Hey did you know this is a Hollow Mask?</p>
-      <img class="f-right" src="img/Chidori.png" alt="Chidori">
-      <p> The Chidori is a lighting style justu</p>
-      <img class="f-left" src="img/Curse mark.png" alt="Curse Mark">
-      <p>A curse mark that provides power.</p>
-    </div>
-    <div class="linksBox">
-      <p><a href="http://172.21.3.4:5000/bgm?file=attack_on_titan">Aot</a></p>
-      <p><a href="http://172.21.3.4:5000/color?hex=ffff00">Change Color</a></p>
-      <p><a href="http://172.21.3.4:5000/perc?amount=100">100 Percent</a></p>
-      <p><a href="http://172.21.3.4:5000/say?phrase=Rasengan!!!!">That One Move</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=NeonGenesisEvangelion">Pretty Song</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=megametal">Metal</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=tokyounravel">Ghoul Unravel</a></p>
-      <p> <a href="http://172.21.3.4:5000/bgm?filesubabandonship"> Subnautica</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=black_clover">Black Clover</a></p>
-      <p> <a href="http://172.21.3.4:5000/sfx?file=missionfailed"> Mission Failed</a> </p>
-      <p> <a href="https://logan24057.github.io/game.html"> Get 2 School</a> </p>
-    </div>
-  </div>
-  <script type="text/javascript">
-    var phraseList = ['Fire', 'Earth', 'Water', 'lighting']
-    var random = Math.random() * 4
-    random = Math.floor(random)
-    var phrasePara = document.getElementById('phrasePara')
-    phrasePara.innerHMTL = phraseList[random]
-    for (phrase in phraseList) {
-      phrasePara.innerHTML += phraseList[phrase]
-    }
-  </script>
-
-</body>
-
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="user-scalable=no">
+        <link rel="icon" href="icon/icon.png" type="image/png">
+        <link rel="apple-touch-icon" href="icon/icon.png">
+        <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
+        <title>Get 2 School</title>
+    </head>
+    <body style="background-color: black">
+        <script type="text/javascript" src="js/libs/pixi.js"></script>
+        <script type="text/javascript" src="js/libs/pixi-tilemap.js"></script>
+        <script type="text/javascript" src="js/libs/pixi-picture.js"></script>
+        <script type="text/javascript" src="js/libs/fpsmeter.js"></script>
+        <script type="text/javascript" src="js/libs/lz-string.js"></script>
+        <script type="text/javascript" src="js/libs/iphone-inline-video.browser.js"></script>
+        <script type="text/javascript" src="js/rpg_core.js"></script>
+        <script type="text/javascript" src="js/rpg_managers.js"></script>
+        <script type="text/javascript" src="js/rpg_objects.js"></script>
+        <script type="text/javascript" src="js/rpg_scenes.js"></script>
+        <script type="text/javascript" src="js/rpg_sprites.js"></script>
+        <script type="text/javascript" src="js/rpg_windows.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
 </html>

@@ -11,7 +11,7 @@
  * Become a Patron to get access to beta/alpha plugins plus other goodies!
  * https://www.patreon.com/CasperGamingRPGM
  * ============================================================================
- * Version: 1.5.2
+ * Version: 1.5.3
  * ----------------------------------------------------------------------------
  * Compatibility: Only tested with my CGMZ plugins.
  * Made for RPG Maker MZ 1.2.0
@@ -74,8 +74,11 @@
  * - More concise error reporting
  * - Bugfix for font size changes throwing off line wrap when drawing text with text codes
  *
+ * 1.5.3:
+ * - Added function for getting file info
+ * - Removed deprecated code (if getting crash after update, update crashing plugin)
+ *
  * @command Initialize
- * @text Initialize
  * @desc Re-initializes some CGMZ Classes. Only call this if you know what you
  * are doing. Will reset all CGMZ Data as if you started a new game.
  *
@@ -108,7 +111,7 @@ var Imported = Imported || {};
 Imported.CGMZ_Core = true;
 var CGMZ = CGMZ || {};
 CGMZ.Versions = CGMZ.Versions || {};
-CGMZ.Versions["CGMZ Core"] = "1.5.2";
+CGMZ.Versions["CGMZ Core"] = "1.5.3";
 CGMZ.Core = CGMZ.Core || {};
 CGMZ.Core.parameters = PluginManager.parameters('CGMZ_Core');
 CGMZ.Core.CheckForUpdates = (CGMZ.Core.parameters["Check for Updates"] === "true");
@@ -213,6 +216,13 @@ CGMZ_Temp.prototype.pluginCommandReinitialize = function() {
 //-----------------------------------------------------------------------------
 CGMZ_Temp.prototype.reportError = function(error, origin, suggestion = "Update Plugins") {
 	console.warn("Error in plugin: " + origin + "\nError description: " + error + "\nPossible solution: " + suggestion);
+};
+//-----------------------------------------------------------------------------
+// Takes a filepath of folder+filename and returns object with separate folder+filename
+//-----------------------------------------------------------------------------
+CGMZ_Temp.prototype.getImageData = function(imageLoc) {
+	const splitPath = imageLoc.split("/");
+	return {folder: "img/" + splitPath[0] + "/", filename: splitPath[1]};
 };
 //-----------------------------------------------------------------------------
 // Takes a number and returns it's toLocaleString value
@@ -362,57 +372,6 @@ CGMZ_Temp.prototype.lookupItem = function(type, id) {
 	}
 	this.reportError("Item type setup incorrectly", "CGMZ Core", "Check item parameters set up through CGMZ plugins");
 	return null;
-};
-//-----------------------------------------------------------------------------
-// Split string based on width and if the next word will fit in that line
-// Deprecated. TO-DO: Remove in future version
-//-----------------------------------------------------------------------------
-CGMZ_Temp.prototype.wrapText = function(string, contents, xOffset = 0, firstLineXOffset = 0, separator = " ") {
-	let lines = [];
-	let tempLine = "";
-	let newString = this.convertEscapeCharacters(string);
-	let words = newString.split(" ");
-	let x = xOffset + firstLineXOffset;
-	for(let i = 0; i < words.length; i++) {
-		if(i === words.length - 1) {
-			separator = "";
-		}
-		let tempWidth = contents.measureTextWidth(words[i] + separator);
-		if(tempWidth + x > contents.width && tempWidth <= contents.width) {
-			lines.push(tempLine);
-			tempLine = "";
-			x = xOffset;
-		}
-		x += tempWidth;
-		tempLine = tempLine + words[i] + separator;
-	}
-	if(tempLine !== "") {
-		lines.push(tempLine);
-	}
-	return lines
-};
-//-----------------------------------------------------------------------------
-// Copy of escape code replacement from Window Base - temporary
-// Deprecated. TO-DO: Remove in future version
-//-----------------------------------------------------------------------------
-CGMZ_Temp.prototype.convertEscapeCharacters = function(text) {
-    /* eslint no-control-regex: 0 */
-    text = text.replace(/\\/g, "\x1b");
-    text = text.replace(/\x1b\x1b/g, "\\");
-    text = text.replace(/\x1bV\[(\d+)\]/gi, (_, p1) =>
-        $gameVariables.value(parseInt(p1))
-    );
-    text = text.replace(/\x1bV\[(\d+)\]/gi, (_, p1) =>
-        $gameVariables.value(parseInt(p1))
-    );
-    text = text.replace(/\x1bN\[(\d+)\]/gi, (_, p1) =>
-        this.actorName(parseInt(p1))
-    );
-    text = text.replace(/\x1bP\[(\d+)\]/gi, (_, p1) =>
-        this.partyMemberName(parseInt(p1))
-    );
-    text = text.replace(/\x1bG/gi, TextManager.currencyUnit);
-    return text;
 };
 //-----------------------------------------------------------------------------
 // Request a response from an API using fetch, and output response to custom
