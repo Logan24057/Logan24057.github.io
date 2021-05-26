@@ -1,6 +1,7 @@
 
 body {
   background-color: black;
+
 }
 
 div {
@@ -17,7 +18,9 @@ div {
   background-color: black
 }
 
-#headerBox {}
+#headerBox {
+  
+}
 
 /*combine selectors*/
 .linksBox,
@@ -60,4 +63,3 @@ a:hover {
   #content {
     width: 100%;
   }
-}
