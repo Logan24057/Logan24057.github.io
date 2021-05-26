@@ -1,6 +1,6 @@
 [
 null,
-{"id":1,"expanded":false,"name":"Debug Room","order":6,"parentId":0,"scrollX":1092,"scrollY":614.6666666666666},
+{"id":1,"expanded":false,"name":"Debug Room","order":6,"parentId":0,"scrollX":2457,"scrollY":1383},
 {"id":2,"expanded":false,"name":"home","order":1,"parentId":0,"scrollX":2457,"scrollY":1383},
 {"id":3,"expanded":false,"name":"boulderPass","order":3,"parentId":0,"scrollX":2457,"scrollY":1383},
 {"id":4,"expanded":true,"name":"bpdugeon1","order":5,"parentId":3,"scrollX":2457,"scrollY":1383},
@@ -39,11 +39,11 @@ null,
 {"id":37,"expanded":true,"name":"Muspelheim","order":37,"parentId":29,"scrollX":1162.909090909091,"scrollY":1504.3636363636365},
 {"id":38,"expanded":false,"name":"MuspelheimsLord","order":38,"parentId":29,"scrollX":1180.3636363636365,"scrollY":655.6363636363636},
 {"id":39,"expanded":false,"name":"roadToSchool","order":39,"parentId":0,"scrollX":1180.3636363636365,"scrollY":655.6363636363636},
-{"id":40,"expanded":false,"name":"School","order":40,"parentId":0,"scrollX":1092,"scrollY":614.6666666666666},
+{"id":40,"expanded":false,"name":"School","order":40,"parentId":0,"scrollX":2457,"scrollY":1383},
 {"id":41,"expanded":true,"name":"schoolInside","order":41,"parentId":40,"scrollX":1092,"scrollY":614.6666666666666},
 {"id":42,"expanded":false,"name":"progammingClassroom","order":42,"parentId":41,"scrollX":1092,"scrollY":614.6666666666666},
 {"id":43,"expanded":false,"name":"Cafeteria","order":43,"parentId":41,"scrollX":832,"scrollY":640},
 {"id":44,"expanded":false,"name":"principlesOffice","order":44,"parentId":40,"scrollX":1092,"scrollY":614.6666666666666},
-{"id":45,"expanded":false,"name":"forestpass","order":45,"parentId":0,"scrollX":2457,"scrollY":1383},
+{"id":45,"expanded":true,"name":"forestpass","order":45,"parentId":0,"scrollX":2457,"scrollY":1383},
 {"id":46,"expanded":false,"name":"forestDungeon","order":46,"parentId":45,"scrollX":2433,"scrollY":1503}
 ]
