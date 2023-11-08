@@ -1,58 +1,119 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thumbs Panel</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div id="content">
-    <div id="headerBox">
-      <h1>Thumbs Panel</h1>
-      <p id="phrasePara"></p>
-    </div>
-    <div class="linksBox">
-      <p>This is a panel to control the Formbar.</p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=up">Thumbs Up</a></p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=wiggle">Thumbs wiggle</a></p>
-      <p><a href="http://172.21.3.4:5000/tutd?thumb=down">Thumbs Down</a></p>
-    </div>
-    <div class="textBox">
-      <img class="f-left" src="img/Hollow.png" alt="Hollow Mask">
-      <p>Hey did you know this is a Hollow Mask?</p>
-      <img class="f-right" src="img/Chidori.png" alt="Chidori">
-      <p> The Chidori is a lighting style justu</p>
-      <img class="f-left" src="img/Curse mark.png" alt="Curse Mark">
-      <p>A curse mark that provides power.</p>
-    </div>
-    <div class="linksBox">
-      <p><a href="http://172.21.3.4:5000/bgm?file=attack_on_titan">Aot</a></p>
-      <p><a href="http://172.21.3.4:5000/color?hex=ffff00">Change Color</a></p>
-      <p><a href="http://172.21.3.4:5000/perc?amount=100">100 Percent</a></p>
-      <p><a href="http://172.21.3.4:5000/say?phrase=Rasengan!!!!">That One Move</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=NeonGenesisEvangelion">Pretty Song</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=megametal">Metal</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=tokyounravel">Ghoul Unravel</a></p>
-      <p> <a href="http://172.21.3.4:5000/bgm?filesubabandonship"> Subnautica</a></p>
-      <p><a href="http://172.21.3.4:5000/bgm?file=black_clover">Black Clover</a></p>
-      <p> <a href="http://172.21.3.4:5000/sfx?file=missionfailed"> Mission Failed</a> </p>
-      <p> <a href="http://Logan24057.github.io/game.html"> Get 2 School</a> </p>
-    </div>
-  </div>
-  <script type="text/javascript">
-    var phraseList = ['Fire', 'Earth', 'Water', 'lighting']
-    var random = Math.random() * 4
-    random = Math.floor(random)
-    var phrasePara = document.getElementById('phrasePara')
-    phrasePara.innerHMTL = phraseList[random]
-    for (phrase in phraseList) {
-      phrasePara.innerHTML += phraseList[phrase]
-    }
-  </script>
+  <canvas id="bg">
 
+  </canvas>
+  <script type="module" src="/main.js"></script>
+  <main>
+
+    <header>
+      <h1>Name</h1>
+      <p>🚀 Welcome to my website!</p>
+    </header>
+
+
+    <blockquote>
+      <p>I like making stuff and putting it on the internet</p>
+    </blockquote>
+
+    <section>
+      <h2>📜 Manifesto</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+
+    </section>
+
+    <section class="light">
+      <h2>👩🏽‍🚀 Projects</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+
+      <h2>🏆 Accomplishments</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+
+    </section>
+
+    <blockquote>
+      <p>The best way out is always through <br>-Robert Frost</p>
+    </blockquote>
+
+    <section class="left">
+      <h2>Work History</h2>
+
+      <h3>McDonalds</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <h3>Burger King</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <h3>Taco Bell</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+
+    </section>
+
+
+
+
+  </main>
 </body>
 
 </html>
