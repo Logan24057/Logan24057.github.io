@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 // starting position of the images from the top
-const STARTY = -10
+const STARTY = -28
 
 // create a new scene
 const scene = new THREE.Scene();
@@ -8,7 +8,7 @@ const scene = new THREE.Scene();
 // create and position the camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.y = STARTY
-camera.position.z = 30;
+camera.position.z = 50;
 
 
 // create list of images in the 'img' folder
@@ -66,7 +66,7 @@ function resizeWindow() {
         camera.position.x = 28
         for (const child in scene.children) {
             scene.children[child].rotation.y = 15 * (Math.PI / 180)
-            scene.children[child].position.y = child * -30;
+            scene.children[child].position.y = child * -25;
         }
     }
 }
