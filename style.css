@@ -10,6 +10,13 @@ body {
     color: white;
 }
 
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    padding: 10px;
+    text-shadow: 2px 2px 5px;
+}
+
 #content {
     float: right;
     color: #FFFFFF;
@@ -22,11 +29,14 @@ body {
 }
 
 h1 {
-    text-align: center;
-}
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    text-shadow: 2px 2px 2px;}
 
 h2 {
-    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    text-shadow: 2px 2px 5px;
 }
 
 @media  screen and (max-width: 700px) {
