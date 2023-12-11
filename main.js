@@ -61,12 +61,15 @@ function resizeWindow() {
         for (const child in scene.children) {
             scene.children[child].rotation.y = 0 * (Math.PI / 180)
             scene.children[child].position.y = child * -30;
+            scene.children[child].position.x = -0;
         }
     } else {
         camera.position.x = 28
         for (const child in scene.children) {
             scene.children[child].rotation.y = 15 * (Math.PI / 180)
             scene.children[child].position.y = child * -25;
+            scene.children[child].position.x = -15;
+            
         }
     }
 }
