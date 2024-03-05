@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>API Project</title>
+</head>
+
+<body>
+    <div class="parent-container">
+        <div class="sidebar-left">
+            <!-- Sidebar content goes here -->
+            <img class="sidebar-left-img" src="/img/editBLTN.gif" alt="edit here">
+        </div>
+        <div class="container">
+            <div class="header">
+                <h1>API's</h1>
+            </div>
+            <div class="gridBody">
+                <p>Fortnite</p>
+                <a href="/fortnite">
+                    <img src="/img/fortnite.jpg" alt="Fortnite Logo"  style="width: 70px; height: 70px; display: block; margin-left: auto; margin-right: auto;"></img>
+                </a>
+                <p>Weather</p>
+                <img src="/img/weatherLogo.png" alt="Weather Logo" style="width: 70px; height: 70px; display: block; margin-left: auto; margin-right: auto;">
+                <p>Warframe</p>
+                <img src="/img/warframeLogo.png" alt="Warframe Logo" style="width: 70px; height: 70px; display: block; margin-left: auto; margin-right: auto;">
+                <p>Spotify</p>
+                <img src="/img/spotifyLogo.png" alt="Spotify Logo" style="width: 70px; height: 70px; display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <div class="footer">
+                <p>Github: <a href="http://https://github.com/Logan24057">Logan24057</a></p>
+            </div>
+        </div>
+        <div class="sidebar-right">
+            <!-- Sidebar content goes here -->
+            <img class="sidebar-right-img" src="/img/editSus.gif" alt="edit here">
+        </div>
+
+    </div>
+</body>
+<script>
+    // make an xmlttp request to https://api.weather.gov/gridpoints/CTP/115,24/forecast
+    //get the response and parse it
+    // display the forecast in the console
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://api.weather.gov/gridpoints/CTP/115,24/forecast', true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var response = JSON.parse(xhr.responseText);
+            for (const day of response.properties.periods) {
+                console.log(day.name + ": " + day.detailedForecast);
+
+            }
+        }
+    }
+
+
+
+</script>
+
+</html>
