@@ -13,13 +13,15 @@ body {
 
 
 .container {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     grid-template-columns: [start] 200px [sidebar-start] 40px [line2] 50px [line3] auto [aside-start] 50px [aside-end] 40px [end];
     grid-template-rows: [header] auto [body] 1fr [footer] auto;
     border: 5px;
     border-style: solid;
     height: 572px;
-    /* color: rgb(255, 255, 255) */
+    /* color: rgb(255, 255, 255); */
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .header {
@@ -36,42 +38,41 @@ body {
     border-style: solid;
     margin: 10px;
     height: 421px;
+    width: 250px;
     /* color: rgb(255, 255, 255) */
 }
 
-#screen {
-    margin: 0px;
-    padding: 0px;
-    /* color: rgb(255, 255, 255) */
-}
+
 
 .sidebar-left {
-    width: 360px;
+    width: 450px;
     border: 5px;
     border-style: solid;
     padding: 0px;
-    height: 500px;
+    height: 560px;
     /* color: rgb(255, 255, 255) */
 }
 
 .sidebar-left-img {
-    width: 360px;
-    height: 500px;
+    width: 380px;
+    height: 540px;
+    object-fit: contain;
     /* color: rgb(255, 255, 255) */
 }
 
 .sidebar-right {
-    width: 360px;
+    width: 450px;
     border: 5px;
     border-style: solid;
     padding: 0px;
-    height: 500px;
+    height: 560px;
     /* color: rgb(255, 255, 255) */
 }
 
 .sidebar-right-img {
-    width: 360px;
-    height: 500px;
+    width: 380px;
+    height: 540px;
+    object-fit: contain;
     /* color: rgb(255, 255, 255) */
 }
 
