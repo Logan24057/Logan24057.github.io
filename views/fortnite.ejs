@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
+        #soundButton {
+            background-color: lightgray;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 45px;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        }
+
+        #itemShopBox {
+            width: 100%;
+            margin: 15px;
+            display: inline-block;
+            align-items: center;
+            background-color: lightgray;
+        }
+
+        .itemBox {
+            text-align: center;
+            width: 300px;
+            display: inline-block;
+            margin: 15px;
+            border: 1px solid black;
+            color: white;
+            margin-top: 10px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="itemShopBox">
+        <h1>
+            <audio id="sound">
+                <source src="/audio/chugjug.mp3" type="audio/mp3">
+            </audio>
+            <button id="soundButton" onclick="playSound('sound')">Fortnite</button>
+        </h1>
+    </div>
+    <!-- <audio controls autoplay style="display: none;"><source src="/audio/chugjug.mp3" type="audio/mpeg"> </audio> -->
+
+</body>
+<script>
+    function playSound(sound) {
+        var song1 = document.getElementById(sound);
+        song1.volume = .25; // setting the volume to 25% because the sound is loud
+        if (song1.paused) {  // if song1 is paused
+            song1.currentTime = 0
+            song1.play();
+        } else {
+            song1.pause();
+        }
+    }
+    // make an xmlttp request to https://api.weather.gov/gridpoints/CTP/115,24/forecast
+    //get the response and parse it
+    // display the forecast in the console
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://fortnite-api.com/v2/shop/br', true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var response = JSON.parse(xhr.responseText);
+            console.log(response.data.featured.entries);
+            for (const entrie of response.data.featured.entries) {
+                console.log(entrie.items[0].name);
+
+                var itemBox = document.createElement('div');
+                itemBox.classList.add('itemBox');
+                if (entrie.bundle){
+                    itemBox.innerHTML = `<h2>${entrie.bundle.name}</h2> <p><img src='${response.data.vbuckIcon}' width= '20px' height= '20px'>${entrie.regularPrice}</p>`;
+                }else {
+                    itemBox.innerHTML = `<h2>${entrie.items[0].name}</h2> <p><img src='${response.data.vbuckIcon}' width= '20px' height= '20px'>${entrie.regularPrice}</p>`;
+                }
+                document.getElementById('itemShopBox').appendChild(itemBox);
+
+                // itemBox.style.backgroundImage = `url(${entrie.items[0].series.image})`;
+                // itemBox.style.backgroundRepeat = 'no-repeat';
+                // itemBox.style.backgroundSize = 'contain';
+                
+                var itemImg = document.createElement('img');
+                itemImg.src = entrie.newDisplayAsset.materialInstances[0].images.Background
+                itemBox.appendChild(itemImg);
+                itemImg.style.width = '90%'
+                itemImg.style.height = '85%'
+
+            }
+            console.log(response.data.featured.entries[0].items[0].name)
+        }
+    }
+
+</script>
+
+</html>
